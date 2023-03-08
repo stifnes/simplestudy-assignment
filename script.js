@@ -8,10 +8,10 @@ function showDropdown(targetDropdown) {
 
 // functions for Selecting dropdown value and closing dropdown 
 function selectDropdownValue(targetDropdown, event) {
-  var target = event.target || event.srcElement;
+  var targetValue = event.target || event.srcElement;
   document.querySelector(
     "[data-target=" + targetDropdown + "]"
-  ).innerHTML = target.innerHTML;
+  ).innerHTML = targetValue.innerHTML;
   document.getElementById(targetDropdown).classList.remove("show");
   document
     .getElementById(targetDropdown + "arrow")
