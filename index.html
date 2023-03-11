@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>Simple Study assignment</title>
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="./style.css" >
+    <link rel="preconnect" href="https://fonts.googleapis.com" >
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
-    />
+    >
   </head>
   <body>
     <!-- main-wrapper -->
     <main>
       <header>
-        <img src="./images/Logo.svg" alt="logo" />
+        <img src="./images/Logo.svg" alt="logo" >
       </header>
       <div class="steps">
         <div class="step active"></div>
@@ -28,149 +28,43 @@
       <section>
         <h1>Your Study Goals</h1>
         <p>Let us know so we can help</p>
-        <div class="slider">
-          <div class="slides">
-            <div class="slide fade" id="slide1">
-              <div class="dropdown">
-                <button
-                  onclick="showDropdown('schoolLikeDropdown')"
-                  class="dropbtn"
-                >
-                  <span data-target="schoolLikeDropdown">
-                    What School Do You like?
-                  </span>
-                  <img
-                    src="./images/dropdown-arrow.svg"
-                    alt="dropdown arrow"
-                    id="schoolLikeDropdownarrow"
-                  />
-                </button>
-                <div id="schoolLikeDropdown" class="dropdown-content">
-                  <a
-                    href="#"
-                    onclick="selectDropdownValue('schoolLikeDropdown',event)"
-                    >TU Dublin</a
-                  >
-                  <a
-                    href="#"
-                    onclick="selectDropdownValue('schoolLikeDropdown',event)"
-                    >Trinity College</a
-                  >
-                  <a
-                    href="#"
-                    onclick="selectDropdownValue('schoolLikeDropdown',event)"
-                    >UCD</a
-                  >
-                </div>
+        <form action="/" class="dropdown" id="student-data-form" onsubmit="submitForm(event)">
+          <div class="slider">
+            <div class="slides">
+              <div class="slide fade show">
+                <select name="school1" id="school" class="dropbtn">
+                  <option value="" selected>Choose a school where you want to apply</option>
+                  <option value="trinity">Trinity</option>
+                  <option value="ucd">UCD</option>
+                </select>
+                <select name="school2" id="college" class="dropbtn">
+                  <option value="" selected>Choose a college</option>
+                  <option value="trinity">Trinity</option>
+                  <option value="ucd">UCD</option>
+                </select>
               </div>
-              <div class="dropdown">
-                <button
-                  onclick="showDropdown('schoolAttendDropdown')"
-                  class="dropbtn"
-                >
-                  <span data-target="schoolAttendDropdown">
-                    What School Do You Attend?
-                  </span>
-                  <img
-                    src="./images/dropdown-arrow.svg"
-                    alt="dropdown arrow"
-                    id="schoolAttendDropdownarrow"
-                  />
-                </button>
-                <div id="schoolAttendDropdown" class="dropdown-content">
-                  <a
-                    href="#"
-                    onclick="selectDropdownValue('schoolAttendDropdown',event)"
-                    >TU Dublin</a
-                  >
-                  <a
-                    href="#"
-                    onclick="selectDropdownValue('schoolAttendDropdown',event)"
-                    >Trinity College</a
-                  >
-                  <a
-                    href="#"
-                    onclick="selectDropdownValue('schoolAttendDropdown',event)"
-                    >UCD</a
-                  >
-                </div>
+              <div class="slide fade">
+                <select name="school3" id="university" class="dropbtn">
+                  <option value="" selected>Choose a university</option>
+                  <option value="trinity">Trinity</option>
+                  <option value="ucd">UCD</option>
+                </select>
+                <select name="school4" id="company" class="dropbtn">
+                  <option value="" selected>Choose a company</option>
+                  <option value="trinity">Trinity</option>
+                  <option value="ucd">UCD</option>
+                </select>
               </div>
             </div>
-            <div class="slide fade" id="slide2">
-              <div class="dropdown">
-                <button
-                  class="dropbtn"
-                  onclick="showDropdown('collegeAttendDropdown')"
-                >
-                  <span data-target="collegeAttendDropdown">
-                    What college Do You Attend?
-                  </span>
-                  <img
-                    src="./images/dropdown-arrow.svg"
-                    alt="dropdown arrow"
-                    id="collegeAttendDropdownarrow"
-                  />
-                </button>
-                <div id="collegeAttendDropdown" class="dropdown-content">
-                  <a
-                    href="#"
-                    onclick="selectDropdownValue('collegeAttendDropdown',event)"
-                    >TU Dublin</a
-                  >
-                  <a
-                    href="#"
-                    onclick="selectDropdownValue('collegeAttendDropdown',event)"
-                    >Trinity College</a
-                  >
-                  <a
-                    href="#"
-                    onclick="selectDropdownValue('collegeAttendDropdown',event)"
-                    >UCD</a
-                  >
-                </div>
-              </div>
-              <div class="dropdown">
-                <button
-                  class="dropbtn"
-                  onclick="showDropdown('collegeLikeDropdown')"
-                >
-                  <span data-target="collegeLikeDropdown">
-                    What college Do You like?
-                  </span>
-                  <img
-                    src="./images/dropdown-arrow.svg"
-                    alt="dropdown arrow"
-                    id="collegeLikeDropdownarrow"
-                  />
-                </button>
-                <div id="collegeLikeDropdown" class="dropdown-content">
-                  <a
-                    href="#"
-                    onclick="selectDropdownValue('collegeLikeDropdown',event)"
-                    >TU Dublin</a
-                  >
-                  <a
-                    href="#"
-                    onclick="selectDropdownValue('collegeLikeDropdown',event)"
-                    >Trinity College</a
-                  >
-                  <a
-                    href="#"
-                    onclick="selectDropdownValue('collegeLikeDropdown',event)"
-                    >UCD</a
-                  >
-                </div>
-              </div>
+            <div class="slider-bullets">
+              <div class="bullet fill"></div>
+              <div class="bullet"></div>
             </div>
           </div>
-          <div class="slider-bullets">
-            <div class="bullet fill" onclick="currentSlide(1)"></div>
-            <div class="bullet" onclick="currentSlide(2)"></div>
-          </div>
-        </div>
-        <button id="continueBtn" onclick="plusSlides(1)">Continue</button>
+          <button id="submitBtn" class="button" aria-label="continue-form">Continue</button>
+        </form>
       </section>
     </main>
-    <script src="./script.js"></script>
+    <script src="./scripts/script.js"></script>
   </body>
 </html>
